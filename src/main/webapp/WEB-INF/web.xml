@@ -1,5 +1,13 @@
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>Beer</servlet-name>
+        <servlet-class>io.github.nealxu.BeerSelect</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Beer</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
 </web-app>
 
 
