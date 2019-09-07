@@ -4,6 +4,7 @@ import java.io.IOException
 
 import javax.servlet.ServletException
 import javax.servlet.http._
+import scala.collection.JavaConverters._
 
 class BeerSelect extends HttpServlet {
 
@@ -13,10 +14,11 @@ class BeerSelect extends HttpServlet {
     val color = req.getParameter("color")
     val brandList = BeerExpert().getBrands(color)
 
-    resp.setContentType("text/html")
-    val out = resp.getWriter
-    out.println("Beer Selection Advice<br>")
-    brandList.foreach(brand => out.println(s"<br>try: $brand"))
+    val styles = brandList.toBuffer.asJava
+    req.setAttribute("styles", styles)
+    val view = req.getRequestDispatcher("result.jsp")
+
+    view.forward(req, resp)
   }
 
 }
