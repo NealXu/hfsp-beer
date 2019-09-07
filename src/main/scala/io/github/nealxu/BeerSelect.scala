@@ -11,11 +11,12 @@ class BeerSelect extends HttpServlet {
   @throws(classOf[ServletException])
   override def doPost(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
     val color = req.getParameter("color")
+    val brandList = BeerExpert().getBrands(color)
 
     resp.setContentType("text/html")
     val out = resp.getWriter
-    out.println(s"<br>Got beer color $color")
-
+    out.println("Beer Selection Advice<br>")
+    brandList.foreach(brand => out.println(s"<br>try: $brand"))
   }
 
 }

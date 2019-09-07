@@ -6,7 +6,7 @@ class BeerExpert {
 
   def getBrands(color: String): List[String] = {
     color match {
-      case AMBER.toString =>
+      case c if c == AMBER.toString =>
         List("Jack Amber", "Red Moose")
       case _ =>
         List("Jail Pale Ale", "Gout Stout")
@@ -17,6 +17,6 @@ class BeerExpert {
 
 object BeerExpert {
 
-  def apply: BeerExpert = new BeerExpert()
+  def apply(): BeerExpert = new BeerExpert()
 
 }
