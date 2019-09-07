@@ -6,6 +6,7 @@
 
     <servlet-mapping>
         <servlet-name>Beer</servlet-name>
+        <!-- "/" is root represents the context root of the web app -->
         <url-pattern>/SelectBeer.do</url-pattern>
     </servlet-mapping>
 </web-app>

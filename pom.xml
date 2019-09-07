@@ -96,7 +96,7 @@
         <configuration>
           <scanIntervalSeconds>3</scanIntervalSeconds>
           <webAppConfig>
-            <contextPath>/beer</contextPath>
+            <contextPath>/Beer-v1</contextPath>
           </webAppConfig>
           <connectors>
             <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
