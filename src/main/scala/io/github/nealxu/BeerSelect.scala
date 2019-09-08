@@ -16,8 +16,8 @@ class BeerSelect extends HttpServlet {
     val styles = brandList.toBuffer.asJava
     req.setAttribute("styles", styles)
 
-    val servletConfig = getServletConfig
-    val adminEmail = servletConfig.getInitParameter("adminEmail")
+    val servletContext = getServletContext
+    val adminEmail = servletContext.getInitParameter("adminEmail")
     println(s"admin email is $adminEmail")
     req.setAttribute("adminEmail", adminEmail)
 
