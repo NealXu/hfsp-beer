@@ -15,6 +15,4 @@ trait LogSupport {
 
   def logDebug(msg: String): Unit = log.debug(msg)
 
-  def log(msg: String): Unit = logDebug(msg)
-
 }
