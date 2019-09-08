@@ -11,6 +11,8 @@
   while (it.hasNext()) {
     out.print("<br>try: " + it.next());
   }
+  String adminEmail = (String)request.getAttribute("adminEmail");
+  out.print("<br><h4>Admin Email: "+ adminEmail +"</h4>");
 %>
 
 </body>

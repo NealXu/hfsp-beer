@@ -13,9 +13,14 @@ class BeerSelect extends HttpServlet {
   override def doPost(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
     val color = req.getParameter("color")
     val brandList = BeerExpert().getBrands(color)
-
     val styles = brandList.toBuffer.asJava
     req.setAttribute("styles", styles)
+
+    val servletConfig = getServletConfig
+    val adminEmail = servletConfig.getInitParameter("adminEmail")
+    println(s"admin email is $adminEmail")
+    req.setAttribute("adminEmail", adminEmail)
+
     val view = req.getRequestDispatcher("result.jsp")
 
     view.forward(req, resp)

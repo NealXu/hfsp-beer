@@ -2,6 +2,10 @@
     <servlet>
         <servlet-name>Beer</servlet-name>
         <servlet-class>io.github.nealxu.BeerSelect</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>xq_xuqi@163.com</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>
