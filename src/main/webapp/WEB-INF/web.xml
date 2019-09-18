@@ -20,6 +20,14 @@
         <servlet-name>ListenerTest</servlet-name>
         <servlet-class>io.github.nealxu.ServletContextListenerTest</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CookieTest</servlet-name>
+        <servlet-class>io.github.nealxu.CookieTest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CheckCookie</servlet-name>
+        <servlet-class>io.github.nealxu.CheckCookie</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>Beer</servlet-name>
@@ -29,6 +37,14 @@
     <servlet-mapping>
         <servlet-name>ListenerTest</servlet-name>
         <url-pattern>/ListenerTest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CookieTest</servlet-name>
+        <url-pattern>/CookieTest.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckCookie</servlet-name>
+        <url-pattern>/CheckCookie.do</url-pattern>
     </servlet-mapping>
 </web-app>
 
